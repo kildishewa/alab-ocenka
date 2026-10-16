@@ -130,10 +130,10 @@ body{color:var(--ink);font-family:'Roboto',sans-serif;font-weight:300;line-heigh
     radial-gradient(56% 44% at 5% 99%, rgba(205,196,234,.40), rgba(238,122,180,.12) 50%, rgba(255,255,255,0) 82%),
     linear-gradient(135deg, rgba(246,196,155,.16) 0%, rgba(255,255,255,.42) 44%, rgba(205,196,234,.20) 100%)}
 .page:last-child{break-after:auto}
-.brandhead{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:28px 0 0}
+.brandhead{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 0 0}
 .brandhead img{height:44px;width:auto;display:block}
 .contacts{font-size:12px;color:var(--soft);text-align:right;line-height:1.5}
-.hr{height:1px;background:var(--hair);border:0;margin:18px 0 0}
+.hr{height:1px;background:var(--hair);border:0;margin:14px 0 0}
 b,strong{font-weight:500}
 
 /* поля бланка */
@@ -155,10 +155,14 @@ b,strong{font-weight:500}
 h1{font-size:32px;line-height:1.1;font-weight:300;letter-spacing:-.01em;margin:6px 0 0}
 h2{font-weight:400;font-size:17px;letter-spacing:-.01em;margin:14px 0 6px}
 .hint{font-size:11.6px;color:var(--soft);margin-bottom:6px}
-.crit-hint{margin-top:16px}
+.crit-hint{margin-top:10px}
 
 /* стоп-факторы */
-.stop{border:1px solid var(--line);border-left:3px solid var(--coral);border-radius:12px;padding:12px 16px;background:rgba(255,255,255,.62)}
+.client{display:grid;grid-template-columns:auto 1fr;align-items:end;gap:14px;margin-top:10px;border-bottom:1px solid var(--ink);padding-bottom:2px}
+.client span{font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--lilac);padding-bottom:3px}
+.client input{border:0;background:transparent;font:400 15px "Roboto",sans-serif;color:var(--ink);padding:2px 0;outline:0;width:100%}
+.sh{font-weight:500;font-size:13.5px;color:var(--ink);margin-right:4px}
+.stop{margin-top:12px;border:1px solid var(--line);border-left:3px solid var(--coral);border-radius:12px;padding:12px 16px;background:rgba(255,255,255,.62)}
 .stop ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
 .stop li{display:flex;align-items:flex-start;gap:9px;font-size:11.6px;line-height:1.4;padding:3px 0;color:#2a2a30;cursor:pointer;user-select:none}
 .stop li .chk{margin-top:1px}
@@ -244,11 +248,11 @@ footer .c b{color:#fff;font-weight:400}
 
   <div class="lbl">Бриф команды A.LAB для оценки потенциального заказчика</div>
   <h1>Оценка клиента: идём в работу или нет</h1>
+  <label class="client"><span>Заказчик</span><input type="text" id="client" aria-label="Заказчик"></label>
 
 
-  <h2>Стоп-факторы</h2>
   <div class="stop">
-    <div class="hint">Проверяем первыми. Отмечен хоть один — отказываемся, баллы не считаем.</div>
+    <div class="hint"><b class="sh">Стоп-факторы.</b> Проверяем первыми. Отмечен хоть один — отказываемся, баллы не считаем.</div>
     <ul id="stops">
       <li><i class="chk sm"></i><span>Бюджет ниже себестоимости</span></li>
       <li><i class="chk sm"></i><span>Бесплатная концепция или тестовое до договора</span></li>
@@ -364,7 +368,7 @@ footer .c b{color:#fff;font-weight:400}
   opts.forEach(function(o){o.addEventListener('click',function(){var was=o.classList.contains('on');opts.forEach(function(x){x.classList.remove('on')});if(!was)o.classList.add('on');recount()})});
   document.getElementById('reset').addEventListener('click',function(){
     rows.concat(stops,opts).forEach(function(el){el.classList.remove('on')});
-    note.value='';
+    note.value=''; document.getElementById('client').value='';
     recount()});
   recount();
 })();
