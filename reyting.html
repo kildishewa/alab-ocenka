@@ -222,7 +222,7 @@ footer .c b{color:#fff;font-weight:400}
     <div class="f"><div class="h">Как работается<span>30</span></div><ul>
       <li>Платит вовремя <i>10</i></li>
       <li>Держит сроки и отвечает быстро <i>10</i></li>
-      <li>Балл по листу оценки <i>до 10, из 24</i></li></ul></div>
+      <li>Балл по листу оценки <i>до 10, из 23</i></li></ul></div>
     <div class="f"><div class="h">Что даёт на будущее<span>30</span></div><ul>
       <li>Повторный проект или продление <i>10</i></li>
       <li>Рекомендовал нас <i>10</i></li>
@@ -243,7 +243,7 @@ footer .c b{color:#fff;font-weight:400}
     <colgroup><col style="width:52px"><col style="width:150px"><col style="width:100px"><col style="width:60px"><col style="width:62px"><col style="width:62px"><col style="width:58px"><col style="width:74px"><col style="width:74px"><col style="width:66px"><col style="width:104px"><col><col style="width:26px"></colgroup>
     <thead>
       <tr><th></th><th></th><th class="grp" colspan="2">Деньги</th><th class="grp" colspan="3">Как работается</th><th class="grp" colspan="3">На будущее</th><th></th><th></th><th></th></tr>
-      <tr><th class="c">Место</th><th>Клиент</th><th class="c">Выручка за год, ₽</th><th class="c">Маржа, %</th><th class="c">Платит вовремя</th><th class="c">Сроки и ответы</th><th class="c">Лист, из 24</th><th class="c">Повторный проект</th><th class="c">Рекомен-<br>довал</th><th class="c">Кейс, премия</th><th class="c">Итог</th><th>Что может поменяться</th><th></th></tr>
+      <tr><th class="c">Место</th><th>Клиент</th><th class="c">Выручка за год, ₽</th><th class="c">Маржа, %</th><th class="c">Платит вовремя</th><th class="c">Сроки и ответы</th><th class="c">Лист, из 23</th><th class="c">Повторный проект</th><th class="c">Рекомен-<br>довал</th><th class="c">Кейс, премия</th><th class="c">Итог</th><th>Что может поменяться</th><th></th></tr>
     </thead>
     <tbody id="rows"></tbody>
   </table>
@@ -269,8 +269,8 @@ footer .c b{color:#fff;font-weight:400}
   function money(x){return x?Math.round(x).toString().replace(/\B(?=(\d{3})+(?!\d))/g,' '):''}
 
   function score(c,maxRev){
-    var rev=num(c.rev), m=num(c.margin), l=Math.min(num(c.list),24);
-    var p={rev:maxRev>0?25*rev/maxRev:0, margin:Math.max(0,Math.min(15,15*m/40)), list:10*l/24};
+    var rev=num(c.rev), m=num(c.margin), l=Math.min(num(c.list),23);
+    var p={rev:maxRev>0?25*rev/maxRev:0, margin:Math.max(0,Math.min(15,15*m/40)), list:10*l/23};
     CHECKS.forEach(function(k){p[k[0]]=c.checks&&c.checks[k[0]]?k[2]:0});
     p.money=p.rev+p.margin; p.work=p.pay+p.easy+p.list; p.future=p.repeat+p.rec+p.case;
     p.total=p.money+p.work+p.future; return p;
@@ -310,7 +310,7 @@ footer .c b{color:#fff;font-weight:400}
         '<td><input type="number" data-f="margin" value="'+(c.margin||'')+'" placeholder="0" min="0" max="100"></td>'+
         '<td class="c"><span class="chk'+(c.checks.pay?' on':'')+'" data-k="pay"></span></td>'+
         '<td class="c"><span class="chk'+(c.checks.easy?' on':'')+'" data-k="easy"></span></td>'+
-        '<td><input type="number" data-f="list" value="'+(c.list||'')+'" placeholder="0" min="0" max="24" step="0.5"></td>'+
+        '<td><input type="number" data-f="list" value="'+(c.list||'')+'" placeholder="0" min="0" max="23" step="0.5"></td>'+
         '<td class="c"><span class="chk'+(c.checks.repeat?' on':'')+'" data-k="repeat"></span></td>'+
         '<td class="c"><span class="chk'+(c.checks.rec?' on':'')+'" data-k="rec"></span></td>'+
         '<td class="c"><span class="chk'+(c.checks['case']?' on':'')+'" data-k="case"></span></td>'+
