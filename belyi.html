@@ -131,7 +131,7 @@ body{color:var(--ink);font-family:'Roboto',sans-serif;font-weight:300;line-heigh
     linear-gradient(135deg, rgba(246,196,155,.16) 0%, rgba(255,255,255,.42) 44%, rgba(205,196,234,.20) 100%)}
 .page:last-child{break-after:auto}
 .brandhead{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:28px 0 0}
-.brandhead img{height:50px;width:auto;display:block}
+.brandhead img{height:44px;width:auto;display:block}
 .contacts{font-size:12px;color:var(--soft);text-align:right;line-height:1.5}
 .hr{height:1px;background:var(--hair);border:0;margin:18px 0 0}
 b,strong{font-weight:500}
@@ -169,13 +169,14 @@ table{width:100%;border-collapse:collapse;table-layout:fixed}
 col.c-n{width:24px}col.c-k{width:150px}col.c-b{width:56px}col.c-x{width:48px}
 th{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--soft);text-align:left;padding:0 8px 6px;border-bottom:1px solid var(--ink)}
 th.c,td.c{text-align:center}
-td{font-size:11.6px;line-height:1.38;padding:5px 8px;vertical-align:middle;border-bottom:1px solid var(--line);color:#2a2a30}
+td{font-size:11.2px;line-height:1.32;padding:3.4px 8px;vertical-align:middle;border-bottom:1px solid var(--line);color:#2a2a30}
 tbody tr.crit{cursor:pointer;user-select:none}
 tbody tr.crit.on td{background:rgba(205,196,234,.28)}
 tr.crit.on .pt:not(.two){background:#fff}
 td.n{color:var(--soft);font-size:10.5px;padding-left:0;padding-right:0}
 td.k{font-weight:500;color:var(--ink)}
 .pt{display:inline-block;min-width:26px;padding:1px 0;border-radius:8px;font-size:11px;font-weight:600;text-align:center;background:#ece8f6;color:var(--ink)}
+.pt.half{background:#f3eefb;color:var(--lilac);min-width:30px}
 .pt.two{background:var(--magenta);color:#fff}
 tr.other td{vertical-align:top;padding-top:8px;padding-bottom:8px}
 tr.other td.c{padding-top:10px}
@@ -187,7 +188,7 @@ td.or{position:relative}
 .lines:before{content:"";position:absolute;left:0;right:0;top:19px;border-top:1px solid #c9c3d8}
 .opt{cursor:pointer;user-select:none;outline:1.5px solid transparent;outline-offset:2px}
 .opt.on{outline-color:var(--ink)}
-tr.g td{border-bottom:0;padding:12px 0 3px;font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--lilac)}
+tr.g td{border-bottom:0;padding:8px 0 2px;font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--lilac)}
 tr.g td em{font-style:normal;text-transform:none;letter-spacing:0;font-weight:400;color:var(--soft);font-size:11px;margin-left:8px}
 
 /* итог */
@@ -268,32 +269,37 @@ footer .c b{color:#fff;font-weight:400}
       <tr class="crit" data-p="2"><td class="n">01</td><td class="k">Бюджет</td><td>Бюджет назван и покрывает нашу цену по прайсу</td><td class="c"><span class="pt two">2</span></td><td class="c"><span class="chk"></span></td></tr>
       <tr class="crit" data-p="1"><td class="n">02</td><td class="k">Оплата</td><td>Предоплата от 50% или оплата этапа до его старта</td><td class="c"><span class="pt">1</span></td><td class="c"><span class="chk"></span></td></tr>
 
-      <tr class="g"><td colspan="5">Б · Задача и сроки</td></tr>
+      <tr class="g"><td colspan="5">Б · Задача и команда клиента</td></tr>
       <tr class="crit" data-p="1"><td class="n">03</td><td class="k">Задача</td><td>Клиент ясно формулирует, что нужно сделать и какой результат он ждёт</td><td class="c"><span class="pt">1</span></td><td class="c"><span class="chk"></span></td></tr>
       <tr class="crit" data-p="1"><td class="n">04</td><td class="k">Сроки</td><td>Реалистичные и совпадают с нашим графиком</td><td class="c"><span class="pt">1</span></td><td class="c"><span class="chk"></span></td></tr>
       <tr class="crit" data-p="1"><td class="n">05</td><td class="k">Кто решает</td><td>Человек, который принимает решение, известен и участвует в обсуждении</td><td class="c"><span class="pt">1</span></td><td class="c"><span class="chk"></span></td></tr>
+      <tr class="crit" data-p="1"><td class="n">06</td><td class="k">Специалисты</td><td>Кроме руководителя, решения принимают и профильные специалисты</td><td class="c"><span class="pt">1</span></td><td class="c"><span class="chk"></span></td></tr>
+      <tr class="crit" data-p="1"><td class="n">07</td><td class="k">Маркетолог</td><td>В команде заказчика есть маркетолог</td><td class="c"><span class="pt">1</span></td><td class="c"><span class="chk"></span></td></tr>
 
       <tr class="g"><td colspan="5">В · Как клиент ведёт себя уже сейчас <em>так же он будет вести себя в проекте</em></td></tr>
-      <tr class="crit" data-p="2"><td class="n">06</td><td class="k">Согласование КП</td><td>Быстро обсуждает и согласовывает КП, без затяжных пауз</td><td class="c"><span class="pt two">2</span></td><td class="c"><span class="chk"></span></td></tr>
-      <tr class="crit" data-p="2"><td class="n">07</td><td class="k">Скорость ответа</td><td>Отвечает в чате, на почте и на звонки в течение рабочего дня</td><td class="c"><span class="pt two">2</span></td><td class="c"><span class="chk"></span></td></tr>
-      <tr class="crit" data-p="1"><td class="n">08</td><td class="k">Встречи</td><td>Не переносит и не отменяет встречи или предупреждает об этом заранее</td><td class="c"><span class="pt">1</span></td><td class="c"><span class="chk"></span></td></tr>
-      <tr class="crit" data-p="2"><td class="n">09</td><td class="k">Тон</td><td>Общается корректно и уважает наше время</td><td class="c"><span class="pt two">2</span></td><td class="c"><span class="chk"></span></td></tr>
-      <tr class="crit" data-p="1"><td class="n">10</td><td class="k">Договорённости</td><td>Присылает обещанное в срок и без напоминаний</td><td class="c"><span class="pt">1</span></td><td class="c"><span class="chk"></span></td></tr>
+      <tr class="crit" data-p="2"><td class="n">08</td><td class="k">Согласование КП</td><td>Быстро обсуждает и согласовывает КП, без затяжных пауз</td><td class="c"><span class="pt two">2</span></td><td class="c"><span class="chk"></span></td></tr>
+      <tr class="crit" data-p="2"><td class="n">09</td><td class="k">Скорость ответа</td><td>Отвечает в чате, на почте и на звонки в течение рабочего дня</td><td class="c"><span class="pt two">2</span></td><td class="c"><span class="chk"></span></td></tr>
+      <tr class="crit" data-p="1"><td class="n">10</td><td class="k">Встречи</td><td>Не переносит и не отменяет встречи или предупреждает об этом заранее</td><td class="c"><span class="pt">1</span></td><td class="c"><span class="chk"></span></td></tr>
+      <tr class="crit" data-p="2"><td class="n">11</td><td class="k">Тон</td><td>Общается корректно и уважает наше время</td><td class="c"><span class="pt two">2</span></td><td class="c"><span class="chk"></span></td></tr>
+      <tr class="crit" data-p="1"><td class="n">12</td><td class="k">Договорённости</td><td>Присылает обещанное в срок и без напоминаний</td><td class="c"><span class="pt">1</span></td><td class="c"><span class="chk"></span></td></tr>
 
       <tr class="g"><td colspan="5">Г · Что получает A.LAB</td></tr>
-      <tr class="crit" data-p="1"><td class="n">11</td><td class="k">Загрузка студии</td><td>У студии есть свободное окно, текущие проекты не сдвигаются</td><td class="c"><span class="pt">1</span></td><td class="c"><span class="chk"></span></td></tr>
-      <tr class="crit" data-p="2"><td class="n">12</td><td class="k">Загрузка партнёров</td><td>Партнёры, которые нужны в проекте, свободны и готовы зайти в наши сроки</td><td class="c"><span class="pt two">2</span></td><td class="c"><span class="chk"></span></td></tr>
-      <tr class="crit" data-p="1"><td class="n">13</td><td class="k">Кейс для портфолио</td><td>Будет видимый результат, который можно показать</td><td class="c"><span class="pt">1</span></td><td class="c"><span class="chk"></span></td></tr>
-      <tr class="crit" data-p="1"><td class="n">14</td><td class="k">Интерес команды</td><td>Задача в нашем профиле, и мы хотим её делать</td><td class="c"><span class="pt">1</span></td><td class="c"><span class="chk"></span></td></tr>
-      <tr class="crit" data-p="1"><td class="n">15</td><td class="k">Перспектива</td><td>Видим плодотворное сотрудничество: повторные проекты и рекомендации</td><td class="c"><span class="pt">1</span></td><td class="c"><span class="chk"></span></td></tr>
-      <tr class="other"><td class="n">16</td><td class="k">Иное<div class="k2">что не учли в списке</div></td><td><div class="lines"><textarea id="note" rows="2" aria-label="Комментарий"></textarea></div></td><td class="c or"><span class="pt opt" data-p="1">1</span><span class="slash">/</span></td><td class="c"><span class="pt two opt" data-p="2">2</span></td></tr>
+      <tr class="crit" data-p="1"><td class="n">13</td><td class="k">Загрузка студии</td><td>У студии есть свободное окно, текущие проекты не сдвигаются</td><td class="c"><span class="pt">1</span></td><td class="c"><span class="chk"></span></td></tr>
+      <tr class="crit" data-p="2"><td class="n">14</td><td class="k">Загрузка партнёров</td><td>Партнёры, которые нужны в проекте, свободны и готовы зайти в наши сроки</td><td class="c"><span class="pt two">2</span></td><td class="c"><span class="chk"></span></td></tr>
+      <tr class="crit" data-p="1"><td class="n">15</td><td class="k">Кейс для портфолио</td><td>Будет видимый результат, который можно показать</td><td class="c"><span class="pt">1</span></td><td class="c"><span class="chk"></span></td></tr>
+      <tr class="crit" data-p="1"><td class="n">16</td><td class="k">Интерес команды</td><td>Задача в нашем профиле, и мы хотим её делать</td><td class="c"><span class="pt">1</span></td><td class="c"><span class="chk"></span></td></tr>
+      <tr class="crit" data-p="0.5"><td class="n">17</td><td class="k">Креативность</td><td>Задача творчески интересная, даже если проект не самый маржинальный</td><td class="c"><span class="pt half">0,5</span></td><td class="c"><span class="chk"></span></td></tr>
+      <tr class="crit" data-p="0.5"><td class="n">18</td><td class="k">Премии и мероприятия</td><td>С проектом можно идти на премии или рассказать о нём на мероприятии</td><td class="c"><span class="pt half">0,5</span></td><td class="c"><span class="chk"></span></td></tr>
+      <tr class="crit" data-p="1"><td class="n">19</td><td class="k">Перспектива</td><td>Видим плодотворное сотрудничество: повторные проекты и рекомендации</td><td class="c"><span class="pt">1</span></td><td class="c"><span class="chk"></span></td></tr>
+
+      <tr class="other"><td class="n">20</td><td class="k">Иное<div class="k2">что не учли в списке</div></td><td><div class="lines"><textarea id="note" rows="2" aria-label="Комментарий"></textarea></div></td><td class="c or"><span class="pt opt" data-p="1">1</span><span class="slash">/</span></td><td class="c"><span class="pt two opt" data-p="2">2</span></td></tr>
     </tbody>
   </table>
 
   <div class="total">
     <span class="lab">Итого</span>
     <span class="verdict" id="verdict"></span>
-    <span class="sum"><span class="v" id="sum">&nbsp;</span> <b>из 20</b></span>
+    <span class="sum"><span class="v" id="sum">&nbsp;</span> <b>из 23</b></span>
   </div>
 </section>
 
@@ -303,9 +309,9 @@ footer .c b{color:#fff;font-weight:400}
 
   <h2>Шкала решения</h2>
   <div class="scale" id="scale">
-    <div class="zone z2" data-z="2"><div class="r">15-20<small>баллов</small></div><div class="t">Идём в работу</div><p>Готовим КП в обычном порядке.</p></div>
-    <div class="zone z1" data-z="1"><div class="r">11-14<small>баллов</small></div><div class="t">Идём на условиях</div><p>В КП и договор закладываем защиту: оплата этапа до его старта, график согласований с датами, лимит кругов правок, сдвиг сроков на время задержки ответа.</p></div>
-    <div class="zone z0" data-z="0"><div class="r">0-10<small>баллов</small></div><div class="t">Отказываемся</div><p>Коротко и вежливо, без разбора внутренних причин.</p></div>
+    <div class="zone z2" data-z="2"><div class="r">17-23<small>баллов</small></div><div class="t">Идём в работу</div><p>Готовим КП в обычном порядке.</p></div>
+    <div class="zone z1" data-z="1"><div class="r">12-16,5<small>баллов</small></div><div class="t">Идём на условиях</div><p>В КП и договор закладываем защиту: оплата этапа до его старта, график согласований с датами, лимит кругов правок, сдвиг сроков на время задержки ответа.</p></div>
+    <div class="zone z0" data-z="0"><div class="r">0-11,5<small>баллов</small></div><div class="t">Отказываемся</div><p>Коротко и вежливо, без разбора внутренних причин.</p></div>
   </div>
 
   <h2>Если после КП молчат</h2>
@@ -346,10 +352,11 @@ footer .c b{color:#fff;font-weight:400}
     var sum=rows.reduce(function(a,r){return a+(r.classList.contains('on')?+r.dataset.p:0)},0);
     var extra=opts.reduce(function(a,o){return a+(o.classList.contains('on')?+o.dataset.p:0)},0);
     if(extra) touched=true;
-    sumEl.innerHTML=touched?(extra?sum+' + '+extra:sum):'&nbsp;';
+    var f=function(x){return String(x).replace('.',',')};
+    sumEl.innerHTML=touched?(extra?f(sum)+' + '+extra:f(sum)):'&nbsp;';
     sum+=extra;
     var z=null;
-    if(stopped) z=0; else if(touched) z=sum>=15?2:(sum>=11?1:0);
+    if(stopped) z=0; else if(touched) z=sum>=17?2:(sum>=12?1:0);
     verdict.className='verdict'+(z===null?'':' z'+z);
     verdict.textContent=z===null?'':(stopped?'Отказываемся: стоп-фактор':NAMES[z]);
     scale.classList.toggle('picked',z!==null);
