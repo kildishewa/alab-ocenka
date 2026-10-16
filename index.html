@@ -192,6 +192,9 @@ td.or{position:relative}
 .lines:before{content:"";position:absolute;left:0;right:0;top:19px;border-top:1px solid #c9c3d8}
 .opt{cursor:pointer;user-select:none;outline:1.5px solid transparent;outline-offset:2px}
 .opt.on{outline-color:var(--ink)}
+.chk.opt{outline:0}
+.chk.opt.on{background:var(--ink)}
+.chk.opt.on:after{content:"";position:absolute;left:5.5px;top:2px;width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
 tr.g td{border-bottom:0;padding:8px 0 2px;font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--lilac)}
 tr.g td em{font-style:normal;text-transform:none;letter-spacing:0;font-weight:400;color:var(--soft);font-size:11px;margin-left:8px}
 
@@ -293,7 +296,7 @@ footer .c b{color:#fff;font-weight:400}
       <tr class="crit" data-p="0.5"><td class="n">18</td><td class="k">Премии и мероприятия</td><td>С проектом можно идти на премии или рассказать о нём на мероприятии</td><td class="c"><span class="pt half">0,5</span></td><td class="c"><span class="chk"></span></td></tr>
       <tr class="crit" data-p="1"><td class="n">19</td><td class="k">Перспектива</td><td>Видим плодотворное сотрудничество: повторные проекты и рекомендации</td><td class="c"><span class="pt">1</span></td><td class="c"><span class="chk"></span></td></tr>
 
-      <tr class="other"><td class="n">20</td><td class="k">Иное<div class="k2">что не учли в списке</div></td><td><div class="lines"><textarea id="note" rows="2" aria-label="Комментарий"></textarea></div></td><td class="c or"><span class="pt opt" data-p="1">1</span><span class="slash">/</span></td><td class="c"><span class="pt two opt" data-p="2">2</span></td></tr>
+      <tr class="other"><td class="n">20</td><td class="k">Иное<div class="k2">что не учли в списке</div></td><td><div class="lines"><textarea id="note" rows="2" aria-label="Комментарий"></textarea></div></td><td class="c"><span class="pt">1</span></td><td class="c"><span class="chk opt" data-p="1"></span></td></tr>
     </tbody>
   </table>
 
